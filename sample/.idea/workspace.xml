@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8d4dd472-b00c-4b9a-b834-499b9b8c1436" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/androidTest/java/com/vv/asmtwst/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/java/com/vv/asmtwst/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/app/src/test/java/com/vv/asmtwst/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Asmtwst/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/groovy/com/vv/asm/ASMPlugin.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/groovy/com/vv/asm/transform/ASMTraceTransform.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/groovy/com/vv/asm/transform/BaseProxyTransform.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/java/com/vv/asm/ASMCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/java/com/vv/asm/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/java/com/vv/asm/MethodTracer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/java/com/vv/asm/ReflectUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/java/com/vv/asm/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../asm-plugin/src/main/resources/gradle-plugins/com.vv.asm-plugin.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gradle/java-publish.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ST4_4_0_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__annotations_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__annotations_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr4_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr4_annotations_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr4_runtime_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr_runtime_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__asm_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__asm_analysis_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__asm_commons_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__asm_debug_all_5_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__asm_tree_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__baseLibrary_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__bcpkix_jdk15on_1_56.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__bcprov_jdk15on_1_56.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__builder_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__builder_model_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__builder_test_api_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__common_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_compress_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__compilerCommon_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ddmlib_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__dvlib_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ecj_4_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__error_prone_annotations_2_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gradle_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gradle_api_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gradle_api_4_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gradle_core_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gradle_installation_beacon_4_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__groovy_all_2_4_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gson_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__guava_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__httpclient_4_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__httpcore_4_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__httpmime_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__intellij_core_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__j2objc_annotations_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__jack_api_0_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javawriter_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__jill_api_0_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__jimfs_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__jsr305_1_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__juniversalchardet_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_reflect_1_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_1_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kxml2_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__layoutlib_api_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__lint_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__lint_api_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__lint_checks_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__lombok_ast_0_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__manifest_merger_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_abego_treelayout_core_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jacoco_core_0_7_4_201502262128.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__proguard_base_5_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__proguard_gradle_5_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__protobuf_java_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__repository_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__sdk_common_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__sdklib_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__transform_api_2_0_0_deprecated_use_gradle_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__trove4j_20160824.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__uast_26_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/androidTest/java/com/asm/sample/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/asm/sample/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/asm/sample/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/src/androidTest/java/cn/smart/store/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../project/robot/Application/MyApplication/store/src/test/java/cn/smart/store/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../smartbaby-server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/annotation/MyCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/base/dao/IBaseDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/base/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/base/entity/Entity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/base/service/ICrudService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/component/FileComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/exception/BaseRuntimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/exception/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/exception/CustomExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/exception/FormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/filter/SimpleCORSFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/http/HttpClientUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/http/HttpRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/http/HttpResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/http/HttpResultType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/BeanFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/Container.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/ContainerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/ContainerNullException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/ContextClosedListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/ContextRefreshedListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/spring/SpringContextUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/AnnotationFiledHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/BeanUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/Constant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/DateConvert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/DateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/FileType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/MyCheckUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/PageUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/Query.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/QueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/ShiroUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/utils/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/validator/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/common/xss/SQLFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/initialize/DataBaseInitListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/annotation/AuthIgnore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/annotation/LoginUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/AudioBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/CourseInfoBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/GameInfoBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/LearnDetailBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/LearnDetailInfoBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/LearnGameDetailInfoBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/PersonBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/RoomListBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/VideoDetailBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/bo/VideoUrlBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/condition/ApiTokenQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiCourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiCourseStageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiLogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiPageviewsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiPersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/h5/H5ApiRegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiAppUsageLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiAudioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiCourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiRegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiUpdateApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/controller/mobile/ApiVideoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/dao/IApiTokenMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/entity/ApiTokenDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/exception/ApiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/exception/ApiExceptionHandlerAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/interceptor/AuthorizationInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/resolver/LoginUserHandlerMethodArgumentResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/service/IApiPersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/service/IApiTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/service/impl/ApiPersonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/service/impl/ApiTokenServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/utils/ApiLoginResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/utils/ApiPageResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/utils/ApiResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/api/utils/ApiStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/ClassCourseBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/ClassInfoBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/CourseContentBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/CourseGameBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/CourseInfoDetailBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/CourseStageDetailBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/CoursewareBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/LearnRecordsBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/RoomBo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/bo/VideoBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/AppQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/ClassCourseQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/ClassInfoQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/ClassPersonQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/CourseContentQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/CourseGameQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/CourseInfoQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/CourseStageQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/CoursewareQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/GameDetailQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/GameInfoQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/PageviewsQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/PersonCourseStageQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/PersonLearnRecordQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/PersonQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/RoomCoursewareQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/RoomQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/TeacherQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/UsageLogQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/VerifyCodeQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/VideoQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/VideoTypeQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/condition/VideoUrlQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/AbstractController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/AppController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/CartoonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/ClassesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/CourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/CourseStageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/CoursewareController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/GameInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/PageviewsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/QiniuCloudStorageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/RoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/TeacherController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/UsageLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/VideoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/controller/VideoTypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IAppMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IClassCourseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IClassInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IClassPersonMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/ICourseContentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/ICourseGameMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/ICourseInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/ICourseStageMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/ICoursewareMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IGameDetailMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IGameInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IPageviewsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IPersonCourseStageMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IPersonLearnRecordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IPersonMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IRoomCoursewareMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IRoomMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/ITeacherMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IUsageLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IVerifyCodeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IVideoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IVideoTypeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/dao/IVideoUrlMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/AppDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/ClassCourseDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/ClassInfoDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/ClassPersonDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/CourseContentDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/CourseGameDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/CourseInfoDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/CourseStageDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/CoursewareDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/GameDetailDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/GameInfoDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/PageviewsDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/PersonCourseStageDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/PersonDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/PersonLearnRecordDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/RoomCourseDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/RoomCoursewareDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/RoomDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/TbTokenDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/TeacherDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/UsageLogDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/VerifyCodeDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/VideoDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/VideoTypeDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/VideoTypeRecordDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/entity/VideoUrlDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IAppService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IClassInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/ICourseContentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/ICourseInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/ICourseStageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/ICoursewareService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IGameDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IGameInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IPageviewsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IPersonCourseStageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IPersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IRoomService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/ITeacherService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IUsageLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IVerifyCodeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IVideoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IVideoTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/IVideoUrlService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/AppServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/ClassInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/CourseContentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/CourseInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/CourseStageServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/CoursewareServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/GameDetailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/GameInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/PageviewsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/PersonCourseStageServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/PersonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/RoomServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/TeacherServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/UsageLogServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/VerifyCodeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/VideoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/VideoTypeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/common/service/impl/VideoUrlServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/condition/SysConfigQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/condition/SysMenuQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/condition/SysRoleQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/condition/SysUserQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/condition/SysUserTokenQueryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/controller/SysConfigController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/controller/SysMenuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/controller/SysRoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/controller/SysUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/dao/ISysConfigMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/dao/ISysMenuMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/dao/ISysRoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/dao/ISysUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/dao/ISysUserTokenMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysConfigDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysMenuDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysRoleDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysRoleMenuDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysUserDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysUserRoleDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/entity/SysUserTokenDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/oauth2/OAuth2Filter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/oauth2/OAuth2Realm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/oauth2/OAuth2Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/oauth2/TokenGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/IShiroService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/ISysConfigService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/ISysMenuService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/ISysRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/ISysUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/ISysUserTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/impl/ShiroServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/impl/SysConfigServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/impl/SysMenuServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/impl/SysRoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/impl/SysUserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/module/sys/service/impl/SysUserTokenServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/ConfigConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/qiniu/CloudStorageConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/qiniu/CloudStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/qiniu/OSSFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/qiniu/QiniuCloudStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/qiniu/QiniuPutRet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/qiniu/QiniuRet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/app/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/app/HttpUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/app/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/app/ParamsBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/app/RequestCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/app/StreamUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/business/FileBusiness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/business/RoomBusiness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/utils/ErrorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/utils/Methods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/third/talkcloud/utils/ParamsUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/utils/ConnectionDataBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/utils/JPushUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/utils/JuheUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/utils/MD5Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/java/cn/smart/server/utils/syncDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/applicationContext-mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/applicationContext-shiro.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/applicationContext-shiro.xml_" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/applicationContext-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/api/IApiTokenMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IAppMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IClassCourseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IClassInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IClassPersonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/ICourseContentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/ICourseGameMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/ICourseInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/ICourseStageMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/ICoursewareMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IGameDetailMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IGameInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IPageviewsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IPersonCourseStageMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IPersonLearnRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IPersonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IRoomCoursewareMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IRoomMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/ITeacherMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IUsageLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IVerifyCodeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IVideoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IVideoTypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/common/IVideoUrlMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/sys/ISysConfigMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/sys/ISysMenuMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/sys/ISysRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/sys/ISysUserDao.xml_" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/sys/ISysUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mapper/sys/ISysUserTokenMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/resources/mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/oauth2-redirect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui-bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui-bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui-standalone-preset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui-standalone-preset.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/main/webapp/swagger/swagger-ui.js.map" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="63349209">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gradle" value="1" />
+          <entry key="gradlew" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Groovy" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gradle" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Groovy" value="15" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-50">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../MVVMHabit" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="87" />
+    <option name="y" value="74" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sample" type="1abcf292:AndroidViewProjectNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../android" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sample" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="sample" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Android App.sample" />
+      <item itemvalue="Android App.app" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d4dd472-b00c-4b9a-b834-499b9b8c1436" name="Default Changelist" comment="" />
+      <created>1551884025518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551884025518</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="87" y="74" width="1280" height="777" extended-state="0" />
+    <layout>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.33441034" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Debug" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32930514" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="ASM" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Flutter Inspector" order="4" />
+      <window_info anchor="right" id="Flutter Outline" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
