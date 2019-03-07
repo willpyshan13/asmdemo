@@ -4,6 +4,9 @@ package com.vv.asm;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+/**
+ * @author pengyushan 2019-3-7
+ */
 public final class ReflectUtil {
     public static Field getDeclaredFieldRecursive(Object clazz, String fieldName) throws NoSuchFieldException, ClassNotFoundException {
         Class<?> realClazz = null;

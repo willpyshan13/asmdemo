@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 /**
- * Created by caichongyang on 2017/6/20.
+ * @author pengyushan 2019-3-7
  */
 public class TraceBuildConfig {
     private static final String TAG = "Matrix.TraceBuildConfig";
@@ -106,6 +106,7 @@ public class TraceBuildConfig {
      * @return
      */
     public boolean isNeedTrace(String clsName, MappingCollector mappingCollector) {
+        System.out.println("isNeedTrace  "+clsName);
         boolean isNeed = true;
         if (mBlackClassMap.contains(clsName)) {
             isNeed = false;
@@ -115,6 +116,7 @@ public class TraceBuildConfig {
             }
             for (String packageName : mBlackPackageMap) {
                 if (clsName.startsWith(packageName.replaceAll("/", "."))) {
+
                     isNeed = false;
                     break;
                 }
@@ -125,11 +127,11 @@ public class TraceBuildConfig {
 
     public boolean isMethodBeatClass(String className, HashMap<String, String> mCollectedClassExtendMap) {
         className = className.replace(".", "/");
-        boolean isApplication = className.equals(TraceBuildConstants.MATRIX_TRACE_METHOD_BEAT_CLASS);
+        boolean isApplication = className.equals(TraceBuildConstants.TRACE_METHOD_BEAT_CLASS);
         if (isApplication) {
             return true;
         } else if (mCollectedClassExtendMap.containsKey(className)) {
-            return mCollectedClassExtendMap.get(className).equals(TraceBuildConstants.MATRIX_TRACE_METHOD_BEAT_CLASS);
+            return mCollectedClassExtendMap.get(className).equals(TraceBuildConstants.TRACE_METHOD_BEAT_CLASS);
         } else {
             return false;
         }

@@ -8,7 +8,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 /**
- * Created by zhangshaowen on 17/6/16.
+ * @author pengyushan 2019-3-7
  */
 class ASMPlugin implements Plugin<Project> {
     private static final String TAG = "SystracePlugin"
@@ -25,7 +25,6 @@ class ASMPlugin implements Plugin<Project> {
             def android = project.extensions.android
             def configuration = project.systrace
             android.applicationVariants.all { variant ->
-
                 String output = configuration.output
                 if (Util.isNullOrNil(output)) {
                     configuration.output = project.getBuildDir().getAbsolutePath() + File.separator + "systrace_output"

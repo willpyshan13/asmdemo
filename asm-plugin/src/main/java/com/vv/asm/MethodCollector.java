@@ -47,7 +47,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-
+/**
+ * @author pengyushan 2019-3-7
+ */
 public class MethodCollector {
 
     private static final String TAG = "Matrix.MethodCollector";
@@ -109,7 +111,6 @@ public class MethodCollector {
         methodMap.clear();
         methodMap.putAll(retraceMethodMap);
         retraceMethodMap.clear();
-
     }
 
     private void saveIgnoreCollectedMethod(MappingCollector mappingCollector) {
@@ -155,7 +156,6 @@ public class MethodCollector {
                 traceMethod.revert(mappingCollector);
                 pw.println(traceMethod.toIgnoreString());
             }
-
         } catch (Exception e) {
             Log.e(TAG, "write method map Exception:%s", e.getMessage());
             e.printStackTrace();
@@ -430,6 +430,7 @@ public class MethodCollector {
             if ((isEmptyMethod() || isGetSetMethod() || isSingleMethod())
                     && mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)) {
                 mIgnoreCount++;
+                System.out.println("methodcollector ignore ="+traceMethod.getMethodName());
                 mCollectedIgnoreMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 return;
             }
@@ -438,6 +439,7 @@ public class MethodCollector {
                 traceMethod.id = mMethodId.incrementAndGet();
                 mCollectedMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 mIncrementCount++;
+                System.out.println("methodcollector collect ="+traceMethod.getMethodName());
             } else if (!mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)
                     && !mCollectedBlackMethodMap.containsKey(traceMethod.className)) {
                 mIgnoreCount++;

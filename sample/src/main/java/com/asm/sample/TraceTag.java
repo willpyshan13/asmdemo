@@ -3,7 +3,7 @@ package com.asm.sample;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Trace;
-
+import android.util.Log;
 
 
 public class TraceTag {
@@ -17,6 +17,7 @@ public class TraceTag {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static void i(String name) {
         Trace.beginSection(name);
+        Log.d(TAG,"start "+name);
     }
 
     /**
@@ -25,5 +26,6 @@ public class TraceTag {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static void o() {
         Trace.endSection();
+        Log.d(TAG,"end ");
     }
 }

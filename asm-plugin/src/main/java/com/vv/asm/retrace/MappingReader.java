@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.io.LineNumberReader;
 
 /**
+ * @author pengyushan 2019-3-7
  */
 public class MappingReader {
     private final static String TAG = "MappingReader";

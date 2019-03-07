@@ -4,6 +4,9 @@ package com.vv.asm;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+/**
+ * @author pengyushan 2019-3-7
+ */
 public class Log {
 
     private static LogImp debugLog = new LogImp() {

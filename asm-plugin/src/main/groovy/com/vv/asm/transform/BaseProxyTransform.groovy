@@ -10,6 +10,9 @@ import com.google.common.hash.Hashing
 
 import java.lang.reflect.Field
 
+/**
+ * @author pengyushan 2019-3-7
+ */
 public abstract class BaseProxyTransform extends Transform {
     protected final Transform origTransform
 

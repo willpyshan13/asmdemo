@@ -27,7 +27,6 @@ public class SystemTraceTransform extends BaseProxyTransform {
     }
 
     public static void inject(Project project, def variant) {
-
         String hackTransformTaskName = getTransformTaskName(
                  "",
                 "",variant.name
@@ -46,12 +45,14 @@ public class SystemTraceTransform extends BaseProxyTransform {
                 for (Task task : taskGraph.getAllTasks()) {
                     if ((task.name.equalsIgnoreCase(hackTransformTaskName) || task.name.equalsIgnoreCase(hackTransformTaskNameForWrapper))
                             && !(((TransformTask) task).getTransform() instanceof SystemTraceTransform)) {
+                        System.out.println("find dex transform. transform class: " + task.transform.getClass() + " . task name: " + task.name)
                         project.logger.warn("find dex transform. transform class: " + task.transform.getClass() + " . task name: " + task.name)
                         project.logger.info("variant name: " + variant.name)
                         Field field = TransformTask.class.getDeclaredField("transform")
                         field.setAccessible(true)
                         field.set(task, new SystemTraceTransform(project, variant, task.transform))
                         project.logger.warn("transform class after hook: " + task.transform.getClass())
+                        System.out.println("transform class after hook: " + task.transform.getClass())
                         break
                     }
                 }
@@ -73,6 +74,7 @@ public class SystemTraceTransform extends BaseProxyTransform {
             rootOutput.mkdirs()
         }
         final TraceBuildConfig traceConfig = initConfig()
+        System.out.println("system_trace_transform name="+getName())
         Log.i("Systrace." + getName(), "[transform] isIncremental:%s rootOutput:%s", isIncremental, rootOutput.getAbsolutePath())
         final MappingCollector mappingCollector = new MappingCollector()
         File mappingFile = new File(traceConfig.getMappingPath());
@@ -100,6 +102,7 @@ public class SystemTraceTransform extends BaseProxyTransform {
         MethodTracer methodTracer = new MethodTracer(traceConfig, collectedMethodMap, methodCollector.getCollectedClassExtendMap())
         methodTracer.trace(scrInputMap, jarInputMap)
         origTransform.transform(transformInvocation)
+        System.out.println("[transform] cost time  "+(System.currentTimeMillis() - start))
         Log.i("Systrace." + getName(), "[transform] cost time: %dms", System.currentTimeMillis() - start)
     }
 

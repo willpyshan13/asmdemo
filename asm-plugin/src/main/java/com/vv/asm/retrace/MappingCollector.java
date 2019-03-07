@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by caichongyang on 2017/8/3.
+ * @author pengyushan 2019-3-7
  */
 public class MappingCollector implements MappingProcessor {
     private final static String TAG = "MappingCollector";

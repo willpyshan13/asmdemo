@@ -3,7 +3,7 @@ package com.asm.sample;
 public class TestIgnoreFile {
     public static void TestGc() {
         for (int i = 0; i < 10000; i ++) {
-            TestInner();
+//            TestInner();
         }
     }
 

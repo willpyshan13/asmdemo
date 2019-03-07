@@ -30,7 +30,9 @@ import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
-
+/**
+ * @author pengyushan 2019-3-7
+ */
 public final class Util {
     private static final String TAG         = "Util";
     public static final  int    BUFFER_SIZE = 16384;
