@@ -52,7 +52,7 @@ import java.util.zip.ZipFile;
  */
 public class MethodCollector {
 
-    private static final String TAG = "Matrix.MethodCollector";
+    private static final String TAG = "MethodCollector";
     private final HashMap<String, TraceMethod> mCollectedMethodMap;
     private final HashMap<String, TraceMethod> mCollectedIgnoreMethodMap;
     private final HashMap<String, TraceMethod> mCollectedBlackMethodMap;
@@ -93,7 +93,6 @@ public class MethodCollector {
 
         saveCollectedMethod(mMappingCollector);
         saveIgnoreCollectedMethod(mMappingCollector);
-
         return mCollectedMethodMap;
 
     }

@@ -33,6 +33,7 @@ public class TraceBuildConfig {
     private final String mMethodMapFile;
     private final String mIgnoreMethodMapFile;
 
+    public String mBeatClssName;
     private final String mBlackListDir;
     private final HashSet<String> mBlackClassMap;
     private final HashSet<String> mBlackPackageMap;
@@ -46,6 +47,10 @@ public class TraceBuildConfig {
         mBlackListDir = blackListFile;
         mBlackClassMap = new HashSet();
         mBlackPackageMap = new HashSet();
+    }
+
+    public String getBeatClassName(){
+        return mBeatClssName;
     }
 
     public String getPackageName() {
@@ -126,11 +131,11 @@ public class TraceBuildConfig {
 
     public boolean isMethodBeatClass(String className, HashMap<String, String> mCollectedClassExtendMap) {
         className = className.replace(".", "/");
-        boolean isApplication = className.equals(TraceBuildConstants.TRACE_METHOD_BEAT_CLASS);
+        boolean isApplication = className.equals(getBeatClassName());
         if (isApplication) {
             return true;
         } else if (mCollectedClassExtendMap.containsKey(className)) {
-            return mCollectedClassExtendMap.get(className).equals(TraceBuildConstants.TRACE_METHOD_BEAT_CLASS);
+            return mCollectedClassExtendMap.get(className).equals(getBeatClassName());
         } else {
             return false;
         }
@@ -166,12 +171,12 @@ public class TraceBuildConfig {
                 if (black.startsWith("-keepclass ")) {
                     black = black.replace("-keepclass ", "");
                     mBlackClassMap.add(processor.proguardClassName(black, black));
-
                 } else if (black.startsWith("-keeppackage ")) {
                     black = black.replace("-keeppackage ", "");
                     mBlackPackageMap.add(black);
+                }else if (black.startsWith("-beatclass ")) {
+                    mBeatClssName = black.replace("-beatclass ", "");
                 }
-
             }
         }
 
