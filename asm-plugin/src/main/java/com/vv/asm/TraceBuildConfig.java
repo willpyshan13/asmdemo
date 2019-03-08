@@ -107,17 +107,16 @@ public class TraceBuildConfig {
      */
     public boolean isNeedTrace(String clsName, MappingCollector mappingCollector) {
         System.out.println("isNeedTrace  "+clsName);
-        boolean isNeed = true;
+        boolean isNeed = false;
         if (mBlackClassMap.contains(clsName)) {
-            isNeed = false;
+            isNeed = true;
         } else {
             if (null != mappingCollector) {
                 clsName = mappingCollector.originalClassName(clsName, clsName);
             }
             for (String packageName : mBlackPackageMap) {
                 if (clsName.startsWith(packageName.replaceAll("/", "."))) {
-
-                    isNeed = false;
+                    isNeed = true;
                     break;
                 }
             }

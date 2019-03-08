@@ -422,7 +422,6 @@ public class MethodCollector {
         public void visitEnd() {
             super.visitEnd();
             TraceMethod traceMethod = TraceMethod.create(0, access, className, name, desc);
-
             if ("<init>".equals(name) /*|| "<clinit>".equals(name)*/) {
                 isConstructor = true;
             }
@@ -430,7 +429,6 @@ public class MethodCollector {
             if ((isEmptyMethod() || isGetSetMethod() || isSingleMethod())
                     && mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)) {
                 mIgnoreCount++;
-                System.out.println("methodcollector ignore ="+traceMethod.getMethodName());
                 mCollectedIgnoreMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 return;
             }
@@ -439,7 +437,6 @@ public class MethodCollector {
                 traceMethod.id = mMethodId.incrementAndGet();
                 mCollectedMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 mIncrementCount++;
-                System.out.println("methodcollector collect ="+traceMethod.getMethodName());
             } else if (!mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)
                     && !mCollectedBlackMethodMap.containsKey(traceMethod.className)) {
                 mIgnoreCount++;

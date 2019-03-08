@@ -16,7 +16,6 @@ public class TraceTag {
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static void i(String name) {
-        Trace.beginSection(name);
         Log.d(TAG,"start "+name);
     }
 
@@ -25,7 +24,5 @@ public class TraceTag {
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static void o() {
-        Trace.endSection();
-        Log.d(TAG,"end ");
     }
 }
