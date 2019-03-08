@@ -102,7 +102,6 @@ public class SystemTraceTransform extends BaseProxyTransform {
         MethodTracer methodTracer = new MethodTracer(traceConfig, collectedMethodMap, methodCollector.getCollectedClassExtendMap())
         methodTracer.trace(scrInputMap, jarInputMap)
         origTransform.transform(transformInvocation)
-        System.out.println("[transform] cost time  "+(System.currentTimeMillis() - start))
         Log.i("Systrace." + getName(), "[transform] cost time: %dms", System.currentTimeMillis() - start)
     }
 
