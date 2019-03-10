@@ -222,7 +222,7 @@ public class MethodTracer {
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc,
                                          String signature, String[] exceptions) {
-            if (isABSClass) {
+            if (isABSClass||!mTraceConfig.isNeedTraceMethod(name)) {
                 return super.visitMethod(access, name, desc, signature, exceptions);
             } else {
                 MethodVisitor methodVisitor = cv.visitMethod(access, name, desc, signature, exceptions);
@@ -270,6 +270,7 @@ public class MethodTracer {
                         sectionName = sectionName.substring(length - TraceBuildConstants.MAX_SECTION_NAME_LEN);
                     }
                 }
+                System.out.println("name="+mTraceConfig.getBeatClassName());
                 mv.visitLdcInsn(sectionName);
                 mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "i", "(Ljava/lang/String;)V", false);
             }
@@ -287,6 +288,7 @@ public class MethodTracer {
             TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
             if (traceMethod != null) {
 
+                System.out.println("name="+mTraceConfig.getBeatClassName());
                 traceMethodCount.incrementAndGet();
                 //mv.visitLdcInsn(traceMethod.id);
                 mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "o", "()V", false);
