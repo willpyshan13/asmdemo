@@ -168,7 +168,7 @@ public class TraceBuildConfig {
         if (!blackConfigFile.exists()) {
             Log.w(TAG, "black config file not exist %s", blackConfigFile.getAbsoluteFile());
         }
-        String blackStr = TraceBuildConstants.DEFAULT_BLACK_TRACE + Util.readFileAsString(blackConfigFile.getAbsolutePath());
+        String blackStr = Util.readFileAsString(blackConfigFile.getAbsolutePath());
 
         String[] blackArray = blackStr.split("\n");
 

@@ -47,9 +47,9 @@ public class TraceMethod {
 
     public String getMethodName() {
         if (desc == null || isNativeMethod()) {
-            return this.className + "." + this.methodName;
+            return this.className + "/" + this.methodName;
         } else {
-            return this.className + "." + this.methodName + "." + desc;
+            return this.className + "/" + this.methodName;
         }
     }
 

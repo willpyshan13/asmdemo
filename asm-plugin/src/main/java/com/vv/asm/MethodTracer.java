@@ -270,7 +270,6 @@ public class MethodTracer {
                         sectionName = sectionName.substring(length - TraceBuildConstants.MAX_SECTION_NAME_LEN);
                     }
                 }
-                System.out.println("name="+mTraceConfig.getBeatClassName());
                 mv.visitLdcInsn(sectionName);
                 mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "i", "(Ljava/lang/String;)V", false);
             }
@@ -287,8 +286,6 @@ public class MethodTracer {
             //}
             TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
             if (traceMethod != null) {
-
-                System.out.println("name="+mTraceConfig.getBeatClassName());
                 traceMethodCount.incrementAndGet();
                 //mv.visitLdcInsn(traceMethod.id);
                 mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "o", "()V", false);
