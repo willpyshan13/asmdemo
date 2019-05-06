@@ -16,7 +16,7 @@ public class TraceTag {
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static void i(String name) {
-        Log.d(TAG,"start "+name);
+        Log.d(TAG,"数据埋点 "+name);
     }
 
     /**

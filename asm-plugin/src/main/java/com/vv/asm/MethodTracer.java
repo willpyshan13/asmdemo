@@ -21,6 +21,7 @@ import com.vv.asm.item.TraceMethod;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.commons.AdviceAdapter;
@@ -240,6 +241,7 @@ public class MethodTracer {
 
     private class TraceMethodAdapter extends AdviceAdapter {
 
+        boolean isHasTracked = false;
         private final String methodName;
         private final String name;
         private final String className;
@@ -261,9 +263,13 @@ public class MethodTracer {
         protected void onMethodEnter() {
             //设置activity方法
             Log.i(TAG,"onMethodEnter=="+methodNameDesc+" "+methodName);
-            if (methodNameDesc.equals("(Landroid/view/View;)V")) {
-//                mv.visitVarInsn(ALOAD, 1);
-//                mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.LOG_ANALYTICS_BASE, "trackViewOnClick", "(Landroid/view/View;)V", false);
+            if (methodName.contains("onClick")) {
+                Label l0 = new Label();
+                mv.visitLabel(l0);
+                mv.visitLineNumber(35, l0);
+                mv.visitVarInsn(ALOAD, 1);
+                mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.LOG_ANALYTICS_BASE, "trackViewOnClick", "(Landroid/view/View;)V", false);
+                isHasTracked = true;
             }else if (methodName.contains("onActivity")){
                 mv.visitTypeInsn(Opcodes.NEW, "java/lang/StringBuilder");
                 mv.visitInsn(Opcodes.DUP);

@@ -261,7 +261,7 @@ public class AutoTrackHelper {
             }
 
 
-            System.out.println("自动埋点:trackFragmentAppViewScreen:" + properties.toString());
+            System.out.println("业务埋点:trackFragmentAppViewScreen:" + properties.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -334,7 +334,7 @@ public class AutoTrackHelper {
             }
 
 
-            System.out.println("自动埋点:OnGroupClick:" + properties.toString());
+            System.out.println("业务埋点:OnGroupClick:" + properties.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -412,7 +412,7 @@ public class AutoTrackHelper {
             }
 
 
-            System.out.println("自动埋点:OnChildClick:" + properties.toString());
+            System.out.println("业务埋点:OnChildClick:" + properties.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -489,7 +489,7 @@ public class AutoTrackHelper {
                 e.printStackTrace();
             }
 
-            System.out.println("自动埋点:onItemClick:" + properties.toString());
+            System.out.println("业务埋点:onItemClick:" + properties.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -509,7 +509,7 @@ public class AutoTrackHelper {
             properties.put(LogConstants.Autotrack.ELEMENT_CONTENT, tabName);
             properties.put(LogConstants.Autotrack.ELEMENT_TYPE, "TabHost");
 
-            System.out.println("自动埋点:onTabChanged:" + properties.toString());
+            System.out.println("业务埋点:onTabChanged:" + properties.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -571,7 +571,7 @@ public class AutoTrackHelper {
             // 5、控件的类型
             properties.put(LogConstants.Autotrack.ELEMENT_TYPE, "MenuItem");
 
-            System.out.println("自动埋点:onNavigationItemSelected:" + properties.toString());
+            System.out.println("业务埋点:onNavigationItemSelected:" + properties.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -639,7 +639,7 @@ public class AutoTrackHelper {
                 }
             }
 
-            System.out.println("自动埋点:onNavigationItemSelected:" + properties.toString());
+            System.out.println("业务埋点:onNavigationItemSelected:" + properties.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -732,7 +732,7 @@ public class AutoTrackHelper {
                 }
             }
 
-            System.out.println("自动埋点:trackDialog:" + properties.toString());
+            System.out.println("业务埋点:trackDialog:" + properties.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -792,7 +792,7 @@ public class AutoTrackHelper {
             // 1、获取当前点击控件的全路径
             String viewPath = AutoTrackUtil.getViewPath(view);
             if (!TextUtils.isEmpty(viewPath)) {
-                properties.put(LogConstants.Autotrack.ELEMENT_VIEWPATH, viewPath);
+//                properties.put(LogConstants.Autotrack.ELEMENT_VIEWPATH, viewPath);
             }
 
             // 2、获取Activity的标题名
@@ -811,7 +811,7 @@ public class AutoTrackHelper {
             // 4、获取ExpandableListView的控件名:ViewId
             String idString = AutoTrackUtil.getViewId(view);
             if (!TextUtils.isEmpty(idString)) {
-                properties.put(LogConstants.Autotrack.ELEMENT_ID, idString);
+//                properties.put(LogConstants.Autotrack.ELEMENT_ID, idString);
             }
 
             // 6、控件的类型
@@ -843,7 +843,7 @@ public class AutoTrackHelper {
             if (p != null) {
                 AutoTrackUtil.mergeJSONObject(p, properties);
             }
-            Log.d("TraceTag","自动埋点:trackViewOnClick:" + properties.toString());
+            Log.d("TraceTag","业务埋点:trackViewOnClick:" + properties.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
