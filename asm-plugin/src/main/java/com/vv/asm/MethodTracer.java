@@ -304,13 +304,6 @@ public class MethodTracer {
 
         @Override
         protected void onMethodExit(int opcode) {
-            //if (isMethodBeatClass && ("<clinit>").equals(name)) {
-            //    StringBuffer stringBuffer = new StringBuffer();
-            //
-            //    stringBuffer.deleteCharAt(stringBuffer.length() - 1);
-            //    mv.visitLdcInsn(stringBuffer.toString());
-            //    mv.visitFieldInsn(Opcodes.PUTSTATIC, className, TraceBuildConstants.MATRIX_TRACE_APPLICATION_CREATE_FILED, "Ljava/lang/String;");
-            //}
             TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
             if (traceMethod != null) {
                 traceMethodCount.incrementAndGet();
@@ -319,8 +312,4 @@ public class MethodTracer {
             }
         }
     }
-
-
-
-
 }

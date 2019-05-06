@@ -28,7 +28,7 @@ import org.objectweb.asm.Type;
  * @author pengyushan 2019-3-7
  */
 public class TraceMethod {
-    private static final String TAG = "Matrix.TraceMethod";
+    private static final String TAG = "TraceMethod";
     public int id;
     public int accessFlag;
     public String className;

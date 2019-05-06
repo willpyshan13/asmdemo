@@ -27,8 +27,8 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 /**
- * Author:xishuang
- * Date:2018-12-06
+ * Author:pengyushan
+ * Date:2019-5-06
  * Des:全埋点的入口类
  */
 public class AutoTrackHelper {

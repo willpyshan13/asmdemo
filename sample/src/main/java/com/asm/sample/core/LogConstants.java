@@ -1,8 +1,8 @@
 package com.asm.sample.core;
 
 /**
- * Author:xishuang
- * Date:2018-12-07
+ * Author:pengyushan
+ * Date:2019-5-06
  * Des:全埋点的一些常量字段
  */
 public class LogConstants {

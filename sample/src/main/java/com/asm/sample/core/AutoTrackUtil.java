@@ -40,8 +40,8 @@ import java.util.Locale;
 
 
 /**
- * Author :xishuang
- * Date :2018-12-05
+ * Author :pengyushan
+ * Date :2019-5-06
  * Des :自动埋点工具类
  */
 public class AutoTrackUtil {
