@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 /**
- * @author pengyushan 2019-3-7
+ * Created by caichongyang on 2017/6/20.
  */
 public class TraceBuildConfig {
     private static final String TAG = "Matrix.TraceBuildConfig";
@@ -33,11 +33,9 @@ public class TraceBuildConfig {
     private final String mMethodMapFile;
     private final String mIgnoreMethodMapFile;
 
-    private String mBeatClssName;
     private final String mBlackListDir;
     private final HashSet<String> mBlackClassMap;
     private final HashSet<String> mBlackPackageMap;
-    private final HashSet<String> mBlackMethodMap;
 
     public TraceBuildConfig(String packageName, String mappingPath, String baseMethodMap, String methodMapFile, String ignoreMethodMapFile, String blackListFile) {
         mPackageName = packageName;
@@ -48,11 +46,6 @@ public class TraceBuildConfig {
         mBlackListDir = blackListFile;
         mBlackClassMap = new HashSet();
         mBlackPackageMap = new HashSet();
-        mBlackMethodMap = new HashSet();
-    }
-
-    public String getBeatClassName(){
-        return mBeatClssName;
     }
 
     public String getPackageName() {
@@ -113,47 +106,33 @@ public class TraceBuildConfig {
      * @return
      */
     public boolean isNeedTrace(String clsName, MappingCollector mappingCollector) {
-        boolean isNeed = false;
+        Log.i(TAG, clsName);
+        boolean isNeed = true;
         if (mBlackClassMap.contains(clsName)) {
-            isNeed = true;
+            isNeed = false;
         } else {
             if (null != mappingCollector) {
                 clsName = mappingCollector.originalClassName(clsName, clsName);
             }
             for (String packageName : mBlackPackageMap) {
                 if (clsName.startsWith(packageName.replaceAll("/", "."))) {
-                    isNeed = true;
+
+                    isNeed = false;
                     break;
                 }
             }
         }
+        Log.i(TAG, "isneed="+isNeed);
         return isNeed;
     }
-
-    /**
-     * whether it need to trace.
-     * if this class in collected set,it return true.
-     * @param methodName
-     * @return
-     */
-    public boolean isNeedTraceMethod(String methodName) {
-        boolean isNeed = false;
-        if (mBlackMethodMap.contains(methodName)) {
-            isNeed = true;
-        } else {
-            isNeed = false;
-        }
-        return isNeed;
-    }
-
 
     public boolean isMethodBeatClass(String className, HashMap<String, String> mCollectedClassExtendMap) {
         className = className.replace(".", "/");
-        boolean isApplication = className.equals(getBeatClassName());
+        boolean isApplication = className.equals(TraceBuildConstants.TRACE_METHOD_BEAT_CLASS);
         if (isApplication) {
             return true;
         } else if (mCollectedClassExtendMap.containsKey(className)) {
-            return mCollectedClassExtendMap.get(className).equals(getBeatClassName());
+            return mCollectedClassExtendMap.get(className).equals(TraceBuildConstants.TRACE_METHOD_BEAT_CLASS);
         } else {
             return false;
         }
@@ -168,7 +147,7 @@ public class TraceBuildConfig {
         if (!blackConfigFile.exists()) {
             Log.w(TAG, "black config file not exist %s", blackConfigFile.getAbsoluteFile());
         }
-        String blackStr = Util.readFileAsString(blackConfigFile.getAbsolutePath());
+        String blackStr = TraceBuildConstants.DEFAULT_BLACK_TRACE + Util.readFileAsString(blackConfigFile.getAbsolutePath());
 
         String[] blackArray = blackStr.split("\n");
 
@@ -189,15 +168,12 @@ public class TraceBuildConfig {
                 if (black.startsWith("-keepclass ")) {
                     black = black.replace("-keepclass ", "");
                     mBlackClassMap.add(processor.proguardClassName(black, black));
+
                 } else if (black.startsWith("-keeppackage ")) {
                     black = black.replace("-keeppackage ", "");
                     mBlackPackageMap.add(black);
-                }else if (black.startsWith("-beatclass ")) {
-                    mBeatClssName = black.replace("-beatclass ", "");
-                }else if(black.startsWith("-tracemethod ")){
-                    black = black.replace("-tracemethod ", "");
-                    mBlackMethodMap.add(black);
                 }
+
             }
         }
 

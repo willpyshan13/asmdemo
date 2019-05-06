@@ -222,7 +222,7 @@ public class MethodTracer {
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc,
                                          String signature, String[] exceptions) {
-            if (isABSClass||!mTraceConfig.isNeedTraceMethod(name)) {
+            if (isABSClass) {
                 return super.visitMethod(access, name, desc, signature, exceptions);
             } else {
                 MethodVisitor methodVisitor = cv.visitMethod(access, name, desc, signature, exceptions);
@@ -243,12 +243,14 @@ public class MethodTracer {
         private final String methodName;
         private final String name;
         private final String className;
+        private final String methodNameDesc;
         private final boolean isMethodBeatClass;
 
         protected TraceMethodAdapter(int api, MethodVisitor mv, int access, String name, String desc, String className,
                                      boolean isMethodBeatClass) {
             super(api, mv, access, name, desc);
             TraceMethod traceMethod = TraceMethod.create(0, access, className, name, desc);
+            this.methodNameDesc = desc;
             this.methodName = traceMethod.getMethodName();
             this.isMethodBeatClass = isMethodBeatClass;
             this.className = className;
@@ -257,22 +259,41 @@ public class MethodTracer {
 
         @Override
         protected void onMethodEnter() {
-            TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
-            if (traceMethod != null) {
-                traceMethodCount.incrementAndGet();
-                String sectionName = methodName;
-                int length = sectionName.length();
-                if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
-                    int parmIndex = sectionName.indexOf('(');
-                    sectionName = sectionName.substring(0, parmIndex);
-                    length = sectionName.length();
+            //设置activity方法
+            Log.i(TAG,"onMethodEnter=="+methodNameDesc+" "+methodName);
+            if (methodNameDesc.equals("(Landroid/view/View;)V")) {
+//                mv.visitVarInsn(ALOAD, 1);
+//                mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.LOG_ANALYTICS_BASE, "trackViewOnClick", "(Landroid/view/View;)V", false);
+            }else if (methodName.contains("onActivity")){
+                mv.visitTypeInsn(Opcodes.NEW, "java/lang/StringBuilder");
+                mv.visitInsn(Opcodes.DUP);
+                mv.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false);
+                mv.visitVarInsn(Opcodes.ALOAD, 1);
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "android/app/Activity", "getLocalClassName", "()Ljava/lang/String;", false);
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
+                mv.visitLdcInsn("/"+name);
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/asm/sample/TraceTag", "i", "(Ljava/lang/String;)V", false);
+            }else {
+                TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
+                if (traceMethod != null) {
+                    traceMethodCount.incrementAndGet();
+                    String sectionName = methodName;
+                    int length = sectionName.length();
                     if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
-                        sectionName = sectionName.substring(length - TraceBuildConstants.MAX_SECTION_NAME_LEN);
+                        int parmIndex = sectionName.indexOf('(');
+                        sectionName = sectionName.substring(0, parmIndex);
+                        length = sectionName.length();
+                        if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
+                            sectionName = sectionName.substring(length - TraceBuildConstants.MAX_SECTION_NAME_LEN);
+                        }
                     }
+                    mv.visitLdcInsn(sectionName);
+                    mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "i", "(Ljava/lang/String;)V", false);
                 }
-                mv.visitLdcInsn(sectionName);
-                mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "i", "(Ljava/lang/String;)V", false);
             }
+
         }
 
         @Override

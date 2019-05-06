@@ -1,18 +1,8 @@
 [package]
-#插入到代码中的类
--beatclass com/asm/sample/TraceTag
-
 # 可以将某个class加入白名单中
-#-keepclass com/asm/sample/TraceTag
--keepclass com/asm/sample/MainActivity
--keepclass com/asm/sample/Main3Activity
--keepclass com/asm/sample/Hjj
--keepclass com/asm/sample/SampleApplication
-
+-keepclass com/asm/sample/TraceTag
+-keepclass com/asm/sample/AutoTrackHelper
+-keepclass com/asm/sample/core/AutoTrackUtil
+-keepclass com/asm/sample/core/LogConstants
 # 可以将某个package加入白名单中
 #-keeppackage com/asm/sample/
-
-# 可以将某个方法加入白名单中
--tracemethod onCreate
--tracemethod onClick
-

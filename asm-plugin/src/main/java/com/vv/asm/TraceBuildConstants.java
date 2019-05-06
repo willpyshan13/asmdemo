@@ -17,21 +17,21 @@
 package com.vv.asm;
 
 /**
- *  @author pengyushan 2019-3-7
+ * Created by caichongyang on 2017/6/20.
  */
 public class TraceBuildConstants {
 
     public final static int MAX_SECTION_NAME_LEN = 127;
 
-//    public final static String TRACE_METHOD_BEAT_CLASS = "com/asm/sample/TraceTag";
-    public final static String TRACE_METHOD_BEAT_CLASS = "com/vv/life/base/trace/TraceTag";
+    /**
+     *
+     */
+    public static final String LOG_ANALYTICS_BASE = "com/asm/sample/AutoTrackHelper";
+
+
+    public final static String TRACE_METHOD_BEAT_CLASS = "com/asm/sample/TraceTag";
     public static final String[] UN_TRACE_CLASS = {"R.class", "R$", "Manifest", "BuildConfig"};
     public final static String DEFAULT_BLACK_TRACE =
-                    "[package]\n"
-                    + "-keepclass com/vv/life/MainActivity\n";
-
-//    public final static String DEFAULT_BLACK_TRACE =
-//            "[package]\n"
-//                    + "-keepclass me/goldze/mvvmhabit/tracelog/TraceTag\n"
-//                    + "-keepclass me/goldze/mvvmhabit/utils/VLog\n";
+            "[package]\n"
+                    + "-keepclass com/asm/sample/TraceTag\n";
 }

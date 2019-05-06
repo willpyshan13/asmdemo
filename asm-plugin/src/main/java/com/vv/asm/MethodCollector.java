@@ -251,6 +251,7 @@ public class MethodCollector {
                     if (mMethodId.get() < traceMethod.id) {
                         mMethodId.set(traceMethod.id);
                     }
+                    Log.e(TAG, traceMethod.className);
                     if (mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)) {
                         mCollectedMethodMap.put(traceMethod.getMethodName(), traceMethod);
                     }
@@ -264,7 +265,6 @@ public class MethodCollector {
             }
         }
     }
-
 
     private void innerCollectMethodFromSrc(File srcFile, boolean isSingle) {
         ArrayList<File> classFileList = new ArrayList<>();
