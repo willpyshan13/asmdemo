@@ -49,7 +49,7 @@ import java.util.zip.ZipOutputStream;
 
 public class MethodTracer {
 
-    private static final String TAG = "Matrix.MethodTracer";
+    private static final String TAG = "MethodTracer";
     private static AtomicInteger traceMethodCount = new AtomicInteger();
     private final TraceBuildConfig mTraceConfig;
     private final HashMap<String, TraceMethod> mCollectedMethodMap;
@@ -70,6 +70,7 @@ public class MethodTracer {
     private void traceMethodFromSrc(Map<File, File> srcMap) {
         if (null != srcMap) {
             for (Map.Entry<File, File> entry : srcMap.entrySet()) {
+                Log.d(TAG, "traceMethodFromSrc==" + entry.getKey().getName());
                 innerTraceMethodFromSrc(entry.getKey(), entry.getValue());
             }
         }
@@ -92,6 +93,7 @@ public class MethodTracer {
         }
 
         for (File classFile : classFileList) {
+            Log.d(TAG, "innerTraceMethodFromSrc=" + classFile.getName());
             InputStream is = null;
             FileOutputStream os = null;
             try {
@@ -143,6 +145,7 @@ public class MethodTracer {
             while (enumeration.hasMoreElements()) {
                 ZipEntry zipEntry = enumeration.nextElement();
                 String zipEntryName = zipEntry.getName();
+                Log.d(TAG, "zipEntryName=" + zipEntryName);
                 if (mTraceConfig.isNeedTraceClass(zipEntryName)) {
                     InputStream inputStream = zipFile.getInputStream(zipEntry);
                     ClassReader classReader = new ClassReader(inputStream);
@@ -187,6 +190,8 @@ public class MethodTracer {
             if (file == null) {
                 continue;
             }
+            Log.d(TAG, "listClassFiles=" + file.getName());
+
             if (file.isDirectory()) {
                 listClassFiles(classFiles, file);
             } else {
@@ -212,6 +217,7 @@ public class MethodTracer {
         public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
             super.visit(version, access, name, signature, superName, interfaces);
             this.className = name;
+//            Log.e(TAG, "visit=" + className);
             if ((access & Opcodes.ACC_ABSTRACT) > 0 || (access & Opcodes.ACC_INTERFACE) > 0) {
                 this.isABSClass = true;
             }
@@ -223,6 +229,7 @@ public class MethodTracer {
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc,
                                          String signature, String[] exceptions) {
+//            Log.e(TAG, "visitMethod=" + className + " desc= " + desc);
             if (isABSClass) {
                 return super.visitMethod(access, name, desc, signature, exceptions);
             } else {
@@ -262,42 +269,42 @@ public class MethodTracer {
         @Override
         protected void onMethodEnter() {
             //设置activity方法
-            Log.i(TAG,"onMethodEnter=="+methodNameDesc+" "+methodName);
-            if (methodName.contains("onClick")) {
+            Log.i(TAG, "onMethodEnter==" + methodNameDesc + " " + methodName);
+            if (methodName.contains("onClick") && methodNameDesc.equals("(Landroid/view/View;)V")) {
                 Label l0 = new Label();
                 mv.visitLabel(l0);
                 mv.visitLineNumber(35, l0);
                 mv.visitVarInsn(ALOAD, 1);
                 mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.LOG_ANALYTICS_BASE, "trackViewOnClick", "(Landroid/view/View;)V", false);
                 isHasTracked = true;
-            }else if (methodName.contains("onActivity")){
+            } else if (methodName.contains("onActivity")&&methodName.contains("Application")) {
                 mv.visitTypeInsn(Opcodes.NEW, "java/lang/StringBuilder");
                 mv.visitInsn(Opcodes.DUP);
                 mv.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false);
                 mv.visitVarInsn(Opcodes.ALOAD, 1);
                 mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "android/app/Activity", "getLocalClassName", "()Ljava/lang/String;", false);
                 mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
-                mv.visitLdcInsn("/"+name);
+                mv.visitLdcInsn("/" + name);
                 mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
                 mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
                 mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/asm/sample/TraceTag", "i", "(Ljava/lang/String;)V", false);
-            }else {
-                TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
-                if (traceMethod != null) {
-                    traceMethodCount.incrementAndGet();
-                    String sectionName = methodName;
-                    int length = sectionName.length();
-                    if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
-                        int parmIndex = sectionName.indexOf('(');
-                        sectionName = sectionName.substring(0, parmIndex);
-                        length = sectionName.length();
-                        if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
-                            sectionName = sectionName.substring(length - TraceBuildConstants.MAX_SECTION_NAME_LEN);
-                        }
-                    }
-                    mv.visitLdcInsn(sectionName);
-                    mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "i", "(Ljava/lang/String;)V", false);
-                }
+            } else {
+//                TraceMethod traceMethod = mCollectedMethodMap.get(methodName);
+//                if (traceMethod != null) {
+//                    traceMethodCount.incrementAndGet();
+//                    String sectionName = methodName;
+//                    int length = sectionName.length();
+//                    if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
+//                        int parmIndex = sectionName.indexOf('(');
+//                        sectionName = sectionName.substring(0, parmIndex);
+//                        length = sectionName.length();
+//                        if (length > TraceBuildConstants.MAX_SECTION_NAME_LEN) {
+//                            sectionName = sectionName.substring(length - TraceBuildConstants.MAX_SECTION_NAME_LEN);
+//                        }
+//                    }
+//                    mv.visitLdcInsn(sectionName);
+//                    mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "i", "(Ljava/lang/String;)V", false);
+//                }
             }
 
         }
