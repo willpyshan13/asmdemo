@@ -363,6 +363,7 @@ public class MethodCollector {
         @Override
         public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
             super.visit(version, access, name, signature, superName, interfaces);
+            Log.d(TAG,name+"  "+superName);
             mCollectedClassExtendMap.put(name, superName);
         }
 
@@ -380,6 +381,7 @@ public class MethodCollector {
         @Override
         public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
             super.visit(version, access, name, signature, superName, interfaces);
+            Log.d(TAG,"visit=="+name+"  "+superName);
             this.className = name;
             if ((access & Opcodes.ACC_ABSTRACT) > 0 || (access & Opcodes.ACC_INTERFACE) > 0) {
                 this.isABSClass = true;
@@ -391,6 +393,7 @@ public class MethodCollector {
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc,
                                          String signature, String[] exceptions) {
+            Log.d(TAG,"visitMethod=="+name+"  "+desc);
             if (isABSClass) {
                 return super.visitMethod(access, name, desc, signature, exceptions);
             } else {
@@ -421,19 +424,22 @@ public class MethodCollector {
         public void visitEnd() {
             super.visitEnd();
             TraceMethod traceMethod = TraceMethod.create(0, access, className, name, desc);
+            Log.d(TAG,"className="+className+" name= "+name);
             if ("<init>".equals(name) /*|| "<clinit>".equals(name)*/) {
                 isConstructor = true;
             }
             // filter simple methods
-            if ((isEmptyMethod() || isGetSetMethod() || isSingleMethod())
+            if ((isGetSetMethod() || isSingleMethod())
                     && mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)) {
                 mIgnoreCount++;
+                Log.d(TAG,"ignore=");
                 mCollectedIgnoreMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 return;
             }
 
             if (mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector) && !mCollectedMethodMap.containsKey(traceMethod.getMethodName())) {
                 traceMethod.id = mMethodId.incrementAndGet();
+                Log.d(TAG,"mCollectedMethodMap=");
                 mCollectedMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 mIncrementCount++;
             } else if (!mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)

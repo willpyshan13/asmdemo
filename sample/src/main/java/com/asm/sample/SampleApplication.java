@@ -34,9 +34,15 @@ public class SampleApplication extends Application {
         long nowTime = System.currentTimeMillis();
         Log.d("tag","createTime="+(nowTime-currentTime));
 
+        initLicycle(100);
+
+    }
+
+    public void initLicycle(final int ls){
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
             public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+                Log.d("tag","print  "+ls);
             }
 
             @Override
