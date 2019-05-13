@@ -26,12 +26,12 @@ public class TraceBuildConstants {
     /**
      *
      */
-    public static final String LOG_ANALYTICS_BASE = "com/asm/sample/AutoTrackHelper";
+    public static final String LOG_ANALYTICS_BASE = "com/vv/trace/AutoTrackHelper";
 
 
-    public final static String TRACE_METHOD_BEAT_CLASS = "com/asm/sample/TraceTag";
+    public final static String TRACE_METHOD_BEAT_CLASS = "com/vv/life/base/trace/TraceTag";
     public static final String[] UN_TRACE_CLASS = {"R.class", "R$", "Manifest", "BuildConfig"};
     public final static String DEFAULT_BLACK_TRACE =
             "[package]\n"
-                    + "-keepclass com/asm/sample/TraceTag\n";
+                    + "-keepclass com/vv/life/base/TraceTag\n";
 }

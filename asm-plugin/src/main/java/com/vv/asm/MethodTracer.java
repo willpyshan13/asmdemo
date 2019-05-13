@@ -298,21 +298,21 @@ public class MethodTracer {
 //                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
 //                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/asm/sample/TraceTag", "i", "(Ljava/lang/String;)V", false);
 
-                Label l0 = new Label();
-                mv.visitLabel(l0);
-                mv.visitLineNumber(45, l0);
-                mv.visitLdcInsn("print");
-                mv.visitTypeInsn(Opcodes.NEW, "java/lang/StringBuilder");
-                mv.visitInsn(Opcodes.DUP);
-                mv.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false);
-                mv.visitLdcInsn("print  "+methodName+"  ");
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
-                mv.visitVarInsn(Opcodes.ALOAD, 0);
-                mv.visitFieldInsn(Opcodes.GETFIELD, className, "val$ls", "I");
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(I)Ljava/lang/StringBuilder;", false);
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "android/util/Log", "d", "(Ljava/lang/String;Ljava/lang/String;)I", false);
-                mv.visitInsn(Opcodes.POP);
+//                Label l0 = new Label();
+//                mv.visitLabel(l0);
+//                mv.visitLineNumber(45, l0);
+//                mv.visitLdcInsn("print");
+//                mv.visitTypeInsn(Opcodes.NEW, "java/lang/StringBuilder");
+//                mv.visitInsn(Opcodes.DUP);
+//                mv.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false);
+//                mv.visitLdcInsn("print  "+methodName+"  ");
+//                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
+//                mv.visitVarInsn(Opcodes.ALOAD, 0);
+//                mv.visitFieldInsn(Opcodes.GETFIELD, className, "val$ls", "I");
+//                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(I)Ljava/lang/StringBuilder;", false);
+//                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
+//                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "android/util/Log", "d", "(Ljava/lang/String;Ljava/lang/String;)I", false);
+//                mv.visitInsn(Opcodes.POP);
             }else if (methodName.contains("accept")&&methodName.contains("com/vv/life/mvvmhabit/binding/viewadapter/view/ViewAdapter")) {
 
 
@@ -358,7 +358,7 @@ public class MethodTracer {
             if (traceMethod != null) {
                 traceMethodCount.incrementAndGet();
                 //mv.visitLdcInsn(traceMethod.id);
-                mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "o", "()V", false);
+//                mv.visitMethodInsn(INVOKESTATIC, TraceBuildConstants.TRACE_METHOD_BEAT_CLASS, "o", "()V", false);
             }
         }
     }

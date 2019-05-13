@@ -82,14 +82,14 @@ public class MethodCollector {
 
         File originMethodMapFile = new File(mTraceConfig.getBaseMethodMap());
         getMethodFromBaseMethod(originMethodMapFile);
-        Log.i(TAG, "[collect] %s method from %s", mCollectedMethodMap.size(), mTraceConfig.getBaseMethodMap());
+//        Log.i(TAG, "[collect] %s method from %s", mCollectedMethodMap.size(), mTraceConfig.getBaseMethodMap());
         retraceMethodMap(mMappingCollector, mCollectedMethodMap);
 
         collectMethodFromSrc(srcFolderList, true);
         collectMethodFromJar(dependencyJarList, true);
         collectMethodFromSrc(srcFolderList, false);
         collectMethodFromJar(dependencyJarList, false);
-        Log.i(TAG, "[collect] incrementCount:%s ignoreMethodCount:%s", mIncrementCount, mIgnoreCount);
+//        Log.i(TAG, "[collect] incrementCount:%s ignoreMethodCount:%s", mIncrementCount, mIgnoreCount);
 
         saveCollectedMethod(mMappingCollector);
         saveIgnoreCollectedMethod(mMappingCollector);
@@ -119,11 +119,11 @@ public class MethodCollector {
         }
         List<TraceMethod> ignoreMethodList = new ArrayList<>();
         ignoreMethodList.addAll(mCollectedIgnoreMethodMap.values());
-        Log.i(TAG, "[saveIgnoreCollectedMethod] size:%s path:%s", mCollectedIgnoreMethodMap.size(), methodMapFile.getAbsolutePath());
+//        Log.i(TAG, "[saveIgnoreCollectedMethod] size:%s path:%s", mCollectedIgnoreMethodMap.size(), methodMapFile.getAbsolutePath());
 
         List<TraceMethod> blackMethodList = new ArrayList<>();
         blackMethodList.addAll(mCollectedBlackMethodMap.values());
-        Log.i(TAG, "[saveIgnoreBlackMethod] size:%s path:%s", mCollectedBlackMethodMap.size(), methodMapFile.getAbsolutePath());
+//        Log.i(TAG, "[saveIgnoreBlackMethod] size:%s path:%s", mCollectedBlackMethodMap.size(), methodMapFile.getAbsolutePath());
 
         Collections.sort(ignoreMethodList, new Comparator<TraceMethod>() {
             @Override
@@ -156,7 +156,7 @@ public class MethodCollector {
                 pw.println(traceMethod.toIgnoreString());
             }
         } catch (Exception e) {
-            Log.e(TAG, "write method map Exception:%s", e.getMessage());
+//            Log.e(TAG, "write method map Exception:%s", e.getMessage());
             e.printStackTrace();
         } finally {
             if (pw != null) {
@@ -174,7 +174,7 @@ public class MethodCollector {
         }
         List<TraceMethod> methodList = new ArrayList<>();
         methodList.addAll(mCollectedMethodMap.values());
-        Log.i(TAG, "[saveCollectedMethod] size:%s path:%s", mCollectedMethodMap.size(), methodMapFile.getAbsolutePath());
+//        Log.i(TAG, "[saveCollectedMethod] size:%s path:%s", mCollectedMethodMap.size(), methodMapFile.getAbsolutePath());
 
         Collections.sort(methodList, new Comparator<TraceMethod>() {
             @Override
@@ -235,7 +235,7 @@ public class MethodCollector {
                 if (!Util.isNullOrNil(nextLine)) {
                     nextLine = nextLine.trim();
                     if (nextLine.startsWith("#")) {
-                        Log.i("[getMethodFromBaseMethod] comment %s", nextLine);
+//                        Log.i("[getMethodFromBaseMethod] comment %s", nextLine);
                         continue;
                     }
                     String[] fields = nextLine.split(",");
@@ -251,14 +251,14 @@ public class MethodCollector {
                     if (mMethodId.get() < traceMethod.id) {
                         mMethodId.set(traceMethod.id);
                     }
-                    Log.e(TAG, traceMethod.className);
+//                    Log.e(TAG, traceMethod.className);
                     if (mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)) {
                         mCollectedMethodMap.put(traceMethod.getMethodName(), traceMethod);
                     }
                 }
             }
         } catch (Exception e) {
-            Log.e(TAG, "[getMethodFromBaseMethod] err!");
+//            Log.e(TAG, "[getMethodFromBaseMethod] err!");
         } finally {
             if (fileReader != null) {
                 fileReader.close();
@@ -439,7 +439,6 @@ public class MethodCollector {
 
             if (mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector) && !mCollectedMethodMap.containsKey(traceMethod.getMethodName())) {
                 traceMethod.id = mMethodId.incrementAndGet();
-                Log.d(TAG,"mCollectedMethodMap=");
                 mCollectedMethodMap.put(traceMethod.getMethodName(), traceMethod);
                 mIncrementCount++;
             } else if (!mTraceConfig.isNeedTrace(traceMethod.className, mMappingCollector)

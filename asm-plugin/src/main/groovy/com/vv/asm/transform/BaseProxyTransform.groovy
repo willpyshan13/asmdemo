@@ -4,6 +4,7 @@ import com.android.build.api.transform.DirectoryInput
 import com.android.build.api.transform.QualifiedContent
 import com.android.build.api.transform.Status
 import com.android.build.api.transform.Transform
+import com.android.build.gradle.internal.pipeline.TransformManager
 import com.vv.asm.ReflectUtil
 import com.google.common.base.Charsets
 import com.google.common.hash.Hashing
@@ -22,12 +23,12 @@ public abstract class BaseProxyTransform extends Transform {
 
     @Override
     Set<QualifiedContent.ContentType> getInputTypes() {
-        return origTransform.getInputTypes()
+        return TransformManager.CONTENT_CLASS
     }
 
     @Override
     Set<QualifiedContent.Scope> getScopes() {
-        return origTransform.getScopes()
+        return TransformManager.SCOPE_FULL_PROJECT
     }
 
     @Override
